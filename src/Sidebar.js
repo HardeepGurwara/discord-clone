@@ -3,6 +3,14 @@ import "./Sidebar.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import SidebarChannel from "./SidebarChannel";
+import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
+import InfoIcon from "@material-ui/icons/Info";
+import PhoneIcon from "@material-ui/icons/Phone";
+import { Avatar } from "@material-ui/core";
+import MicIcon from "@material-ui/icons/Mic";
+import HeadsetIcon from "@material-ui/icons/Headset";
+import SettingsIcon from "@material-ui/icons/Settings";
+
 function Sidebar() {
   return (
     <div className="sidebar">
@@ -24,6 +32,33 @@ function Sidebar() {
           <SidebarChannel />
           <SidebarChannel />
           <SidebarChannel />
+        </div>
+      </div>
+
+      <div className="sidebar__voice">
+        <SignalCellularAltIcon
+          className="sidebar__voiceIcon"
+          fontSize="large"
+        />
+        <div className="sidebar__voiceInfo">
+          <h3>Voice Connected</h3>
+          <p>Stream</p>
+        </div>
+        <div className="sidebar__voiceIcons">
+          <InfoIcon />
+          <PhoneIcon />
+        </div>
+      </div>
+      <div className="sidebar__profile">
+        <Avatar />
+        <div className="sidebar__profileInfo">
+          <h3>Hardeep Gurwara</h3>
+          <p>#myID</p>
+        </div>
+        <div className="sidebar__profileIcons">
+          <MicIcon />
+          <HeadsetIcon />
+          <SettingsIcon />
         </div>
       </div>
     </div>
